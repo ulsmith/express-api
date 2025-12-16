@@ -4,7 +4,7 @@ import DataTools from '../Library/DataTools';
  * @module express-api/System/Response
  * @class Response
  * @description System class to give a base for all system classes, such as services, models, controllers
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT 
  */
 export default class Response<T extends { headers: { [key: string]: string | string[] | undefined }, body: any } = { headers: { [key: string]: string | string[] | undefined }, body: any }> {

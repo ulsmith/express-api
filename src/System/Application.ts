@@ -5,9 +5,9 @@ import { GlobalsType, ServiceType, MiddlewareType } from '../Types/System';
 
 /**
  * @module express-api/System/Application
- * @class Applications
+ * @class Application
  * @description System application handler
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT
  */
 export default class Application<T extends GlobalsType & { $handler?: { file: string; type: 'es-module' | 'module' } }> {

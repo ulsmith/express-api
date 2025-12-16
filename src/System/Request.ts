@@ -24,7 +24,7 @@ const require = createRequire(import.meta.url);
  * @module express-api/System/Request
  * @class Request
  * @description System class to give a base for all system classes, such as services, models, controllers
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT 
  */
 export default class Request<

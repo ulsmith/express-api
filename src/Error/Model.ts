@@ -3,7 +3,7 @@
  * @class Model
  * @extends Error
  * @description Model class to give extended error functionality as a rest error, for returning back data specific error from a model
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT
  */
 export default class ModelError extends Error {

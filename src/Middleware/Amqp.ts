@@ -6,7 +6,7 @@ import { GlobalsType } from '../Types/System';
  * @class Amqp
  * @extends Middleware
  * @description Middleware class providing Amqp DB connection handling on incomming event and outgoing response
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT
  */
 export default class Amqp<T extends GlobalsType> extends Middleware<T> {

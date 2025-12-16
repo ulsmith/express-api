@@ -1,5 +1,4 @@
 # TypeScript build output
-dist/
 *.tsbuildinfo
 
 # Test coverage
@@ -33,6 +32,7 @@ npm-debug.log*
 # OS files
 .DS_Store
 Thumbs.db
+__MACOSX/
 
 # Other files
 TODO.md

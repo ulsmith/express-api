@@ -2,7 +2,7 @@
  * @module express-api/Library/DataTools
  * @class DataTools
  * @description Set of tools for playing with data
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT 
  */
 export default class DataTools {

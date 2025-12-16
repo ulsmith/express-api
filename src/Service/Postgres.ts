@@ -5,7 +5,7 @@ import { Client } from 'pg';
  * @class Postgres
  * @extends Client (the pg base class from npm)
  * @description Service class providing database connection using pg
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT
  * @example
  * new Postgres('192.168.1.10', 5432, 'your_db', 'your_user', 'your_password');

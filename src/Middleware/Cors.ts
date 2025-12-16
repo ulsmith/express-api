@@ -6,7 +6,7 @@ import { GlobalsType } from '../Types/System';
  * @class Cors
  * @extends Middleware
  * @description Middleware class providing cors patching to outgoing response
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT
  */
 export default class Cors<T extends GlobalsType> extends Middleware<T> {

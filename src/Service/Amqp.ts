@@ -5,7 +5,7 @@ import amqp from 'amqplib';
  * @module express-api/Service/Amqp
  * @class Amqp
  * @description Service class providing AMQP connection using amqplib
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT
  * @example
  * new Amqp('alias', 'amqp(s)://abc.xyz', 5671, 'username', 'password');

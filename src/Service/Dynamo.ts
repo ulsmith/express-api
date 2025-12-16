@@ -7,7 +7,7 @@ import { DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb';
  * @module express-api/Service/Dynamo
  * @class Dynamo
  * @description Service class providing DynamoDB connection
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT
  * @example
  * new Dynamo('192.168.1.10', 8000, 'your_db', 'your_key', 'your_secret', 'us-east-1');

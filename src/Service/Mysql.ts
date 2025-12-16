@@ -5,7 +5,7 @@ import mysql2 from 'mysql2/promise';
  * @module express-api/Service/Mysql
  * @class Mysql
  * @description Service class providing database connection using mysql2
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT
  * @example
  * new Mysql('192.168.1.10', 3306, 'your_db', 'your_user', 'your_password');

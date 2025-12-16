@@ -7,11 +7,11 @@ import { CreateTableCommand } from '@aws-sdk/client-dynamodb';
 import { GetCommand, PutCommand, UpdateCommand } from '@aws-sdk/lib-dynamodb';
 
 /**
- * @module express-api/Base/ModelDynamo
+ * @module express-api/Base/Model/Dynamo
  * @class ModelDynamo
  * @extends Core
- * @description System class to give a base for creating dynamo models
- * @author Paul Smith
+ * @description System class to give a base for creating DynamoDB models
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT 
  */
 export default class ModelDynamo<T extends GlobalsType> extends Core<T> {

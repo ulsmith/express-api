@@ -18,13 +18,12 @@ export type Schema = {
 };
 
 /**
- * @namespace API/Base/Controller
+ * @module express-api/Base/Controller/Api
  * @class Api
  * @extends Controller
- * @description Base class to give an extension to system base class for creating models
- * @author Paul Smith (pushfar) <paul.smith@pushfar.com>
- * @copyright 2023 pushfar (pushfar.com) all rights reserved
- * @license Unlicensed
+ * @description Base class to give an extension to system base class for creating API controllers
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
+ * @license MIT
  */
 export default abstract class Api<T extends GlobalsType> extends Controller<T> {
 	/**

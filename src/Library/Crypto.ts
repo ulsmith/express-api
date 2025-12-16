@@ -5,7 +5,7 @@ import JWT from 'jsonwebtoken';
  * @module express-api/Library/Crypto
  * @class Crypto
  * @description Common resource element, functional only, providing crypto functionality
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT 
  */
 export default class Crypto {

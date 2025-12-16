@@ -4,7 +4,7 @@ import { GlobalsType } from '../Types/System';
  * @module express-api/System/Core
  * @class Core
  * @description System class to give a base for all system classes, such as services, models, controllers
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT 
  */
 export default abstract class Core<T extends GlobalsType> {

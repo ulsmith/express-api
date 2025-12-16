@@ -1,5 +1,7 @@
 # ExpressAPI
 
+![Test Coverage](https://img.shields.io/badge/test_coverage-98%25-darkgreen?logo=jest&logoColor=white)
+
 A TypeScript MVC framework for building APIs and Services in a microservice architecture on top of Express.js. ExpressAPI provides a structured, object-oriented approach to Express development with built-in support for databases, middleware, authentication, and services.
 
 Supports FaaS systems too such as Lambda and Functions including event based requests from things such as SQS through additional handlers and template files.

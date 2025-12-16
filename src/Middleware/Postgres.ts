@@ -6,7 +6,7 @@ import { GlobalsType } from '../Types/System';
  * @class Postgres
  * @extends Middleware
  * @description Middleware class providing Postgres DB connection handling on incomming event and outgoing response
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT
  */
 export default class Postgres<T extends GlobalsType> extends Middleware<T> {

@@ -2,13 +2,11 @@ import { SwaggerSchemaMethodType, SwaggerSchemaStringParameterType, SwaggerSchem
 import Request from '../System/Request';
 
 /**
- * @namespace API/Library
+ * @module express-api/Library/SchemaTools
  * @class SchemaTools
- * @extends Controller
- * @description Base class to give an extension to system base class for creating models
- * @author Paul Smith (pushfar) <paul.smith@pushfar.com>
- * @copyright 2023 pushfar (pushfar.com) all rights reserved
- * @license Unlicensed
+ * @description Utility class providing schema parsing and validation functionality
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
+ * @license MIT
  */
 export default class SchemaTools {
 	/**

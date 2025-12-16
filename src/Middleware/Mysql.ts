@@ -6,7 +6,7 @@ import { GlobalsType } from '../Types/System';
  * @class Mysql
  * @extends Middleware
  * @description Middleware class providing Mysql DB connection handling on incomming event and outgoing response
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT
  */
 export default class Mysql<T extends GlobalsType> extends Middleware<T> {

@@ -2,7 +2,7 @@
  * @module express-api/Library/ObjectTools
  * @class ObjectTools
  * @description Set of tools for playing with objects
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT 
  */
 export default class ObjectTools {

@@ -4,11 +4,11 @@ import DataTools from '../../Library/DataTools';
 import { GlobalsType } from '../../Types/System';
 
 /**
- * @module express-api/Base/ModelMysql
+ * @module express-api/Base/Model/Mysql
  * @class ModelMysql
  * @extends Core
- * @description System class to give a base for creating models, exposing the knex DB service and giving base methods
- * @author Paul Smith
+ * @description System class to give a base for creating MySQL models, exposing the knex DB service and giving base methods
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT 
  */
 export default class ModelMysql<T extends GlobalsType> extends Core<T> {

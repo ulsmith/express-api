@@ -3,7 +3,7 @@
  * @class Rest
  * @extends Error
  * @description System class to give extended error functionality as a rest error, for returning back to client
- * @author Paul Smith
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT
  */
 export default class RestError extends Error {

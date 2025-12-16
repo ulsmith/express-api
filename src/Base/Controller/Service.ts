@@ -14,13 +14,12 @@ export type Schema = {
 };
 
 /**
- * @namespace Service/Base/Controller
- * @class Service;
+ * @module express-api/Base/Controller/Service
+ * @class Service
  * @extends Controller
- * @description Base class to give an extension to system base class for creating models
- * @author Paul Smith (pushfar) <paul.smith@pushfar.com>
- * @copyright 2023 pushfar (pushfar.com) all rights reserved
- * @license Unlicensed
+ * @description Base class to give an extension to system base class for creating service controllers
+ * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
+ * @license MIT
  */
 export default abstract class Service<T extends GlobalsType> extends Controller<T> {
 	/**
