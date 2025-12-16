@@ -29,7 +29,7 @@ ExpressAPI is designed for microservice architectures and supports two main appl
 ## Installation
 
 ```bash
-npm install express-api
+npm install @ulsmith/express-api
 ```
 
 **Note:** This package exports TypeScript source files. Your project needs TypeScript configured, or a bundler that handles TypeScript (webpack, esbuild, etc.).
