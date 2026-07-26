@@ -11,16 +11,30 @@ const ZERO_UUID = '00000000-0000-0000-0000-000000000000';
  * @author Paul Smith (ulsmith) <paul.smith@ulsmith.net>
  * @license MIT
  */
-export default class ExpressApiService extends Service {
+class ExpressApiService extends Service {
     constructor() {
         super(...arguments);
         this.service = '';
+    }
+    /**
+     * @protected warnIfMissingCorrelation
+     * @description Warn once if Correlation middleware has not populated $client.correlation
+     */
+    warnIfMissingCorrelation() {
+        if (this.$client?.correlation)
+            return;
+        if (ExpressApiService.correlationWarningShown)
+            return;
+        ExpressApiService.correlationWarningShown = true;
+        console.warn('ExpressApiService: $client.correlation is not set. Register Correlation middleware ' +
+            "(app.middleware(new Correlation(app.globals, 'api'|'service'))) so outbound requests can propagate correlation headers.");
     }
     /**
      * @protected correlationHeaders
      * @description Build correlation headers for outbound requests
      */
     correlationHeaders() {
+        this.warnIfMissingCorrelation();
         return {
             'X-Correlation-Id': this.$client.correlation?.id?.toString() || ZERO_UUID,
             'X-User-Id': this.$client.correlation?.userId?.toString() || ZERO_UUID,
@@ -143,4 +157,6 @@ export default class ExpressApiService extends Service {
         });
     }
 }
+ExpressApiService.correlationWarningShown = false;
+export default ExpressApiService;
 //# sourceMappingURL=ExpressApiService.js.map

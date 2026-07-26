@@ -21,6 +21,12 @@ export default class ExpressApiService<T extends GlobalsType & {
     };
 }> extends Service<T> {
     service: string;
+    private static correlationWarningShown;
+    /**
+     * @protected warnIfMissingCorrelation
+     * @description Warn once if Correlation middleware has not populated $client.correlation
+     */
+    protected warnIfMissingCorrelation(): void;
     /**
      * @protected correlationHeaders
      * @description Build correlation headers for outbound requests
