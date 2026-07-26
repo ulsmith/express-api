@@ -370,6 +370,38 @@ describe('Application', () => {
 			expect(result.status || result.statusCode).toBe(404);
 		});
 
+		it('should return 200 for browser CORS OPTIONS on unmatched routes', async () => {
+			const app = new Application({
+				method: 'OPTIONS',
+				url: '/nonexistent',
+				headers: { Origin: 'http://localhost', 'sec-fetch-mode': 'cors' },
+				body: {},
+				query: {},
+				clientIp: '127.0.0.1'
+			}, 'express');
+
+			const result = await app.run();
+
+			expect(result).toBeDefined();
+			expect(result.status || result.statusCode).toBe(200);
+			expect(result.body).toBe('{}');
+		});
+
+		it('should still return 404 for OPTIONS without browser CORS mode', async () => {
+			const app = new Application({
+				method: 'OPTIONS',
+				url: '/nonexistent',
+				headers: { Origin: 'http://localhost' },
+				body: {},
+				query: {},
+				clientIp: '127.0.0.1'
+			}, 'express');
+
+			const result = await app.run();
+
+			expect(result.status || result.statusCode).toBe(404);
+		});
+
 		it('should set socket and io from request', async () => {
 			const mockSocket = { id: 'socket123' };
 			const mockIo = { emit: jest.fn() };

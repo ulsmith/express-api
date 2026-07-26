@@ -28,7 +28,9 @@ export default class ServiceZod extends Controller {
     }
     /**
      * @public parseBody
-     * @description Parse and validate the request body against the Zod schema defined in zodSchema.post.body
+     * @description Parse and validate the request body against the Zod schema defined in zodSchema.post.body.
+     * Pass the schema type as a generic for compile-time inference:
+     *   this.parseBody<typeof MyService.zodSchema.post.body>(request)
      * @param request The http request passed in to the system
      * @returns The validated body data
      */
@@ -44,7 +46,9 @@ export default class ServiceZod extends Controller {
     }
     /**
      * @public parseOutput
-     * @description Parse and validate response output against the Zod schema defined in zodSchema.post.response
+     * @description Parse and validate response output against the Zod schema defined in zodSchema.post.response.
+     * Pass the response schema type as a generic for compile-time inference:
+     *   this.parseOutput<typeof MyService.zodSchema.post.response[200]['schema']>(data)
      * @param data The response data to send out in a response
      * @param statusCode The HTTP status code to select the response schema (defaults to 200)
      * @returns The validated output data

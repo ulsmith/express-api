@@ -28,7 +28,9 @@ export default class ApiZod extends Controller {
     }
     /**
      * @public parseBody
-     * @description Parse and validate the request body against the Zod schema defined in zodSchema()
+     * @description Parse and validate the request body against the Zod schema defined in zodSchema().
+     * Pass the schema type as a generic for compile-time inference:
+     *   this.parseBody<typeof MyController.zodSchema.post.body>(request)
      * @param request The http request passed in to the system
      * @param method The optional method to use if auto detection fails
      * @returns The validated body data
@@ -46,7 +48,9 @@ export default class ApiZod extends Controller {
     }
     /**
      * @public parsePathParameters
-     * @description Parse and validate the path parameters against the Zod schema defined in zodSchema()
+     * @description Parse and validate the path parameters against the Zod schema defined in zodSchema().
+     * Pass the schema type as a generic for compile-time inference:
+     *   this.parsePathParameters<typeof MyController.zodSchema.get.params>(request)
      * @param request The http request passed in to the system
      * @param method The optional method to use if auto detection fails
      * @returns The validated path parameter data
@@ -64,7 +68,9 @@ export default class ApiZod extends Controller {
     }
     /**
      * @public parseQueryParameters
-     * @description Parse and validate the query parameters against the Zod schema defined in zodSchema()
+     * @description Parse and validate the query parameters against the Zod schema defined in zodSchema().
+     * Pass the schema type as a generic for compile-time inference:
+     *   this.parseQueryParameters<typeof MyController.zodSchema.get.query>(request)
      * @param request The http request passed in to the system
      * @param method The optional method to use if auto detection fails
      * @returns The validated query parameter data
@@ -82,7 +88,9 @@ export default class ApiZod extends Controller {
     }
     /**
      * @public parseOutput
-     * @description Parse and validate response output against the Zod schema defined in zodSchema()
+     * @description Parse and validate response output against the Zod schema defined in zodSchema().
+     * Pass the response schema type as a generic for compile-time inference:
+     *   this.parseOutput<typeof MyController.zodSchema.post.response[200]['schema']>(data)
      * @param data The response data to send out in a response
      * @param method The optional method to use if auto detection fails
      * @param statusCode The HTTP status code to select the response schema (defaults to 200)

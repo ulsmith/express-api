@@ -1,6 +1,6 @@
 {
 	"name": "@ulsmith/express-api",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"description": "An MVC Stack for express js architectures.",
 	"homepage": "https://github.com/xxx/express-api#readme",
 	"bugs": {

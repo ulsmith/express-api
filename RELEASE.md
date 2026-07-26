@@ -1,5 +1,13 @@
 # RELEASE
 
+## 1.2.0
+
+Added Correlation middleware for distributed request context.
+Added ExpressApiService base class for HTTP clients calling other express-api services.
+Added console-first Logger service with subclass extension point for remote logging.
+Return 200 for browser CORS OPTIONS requests on unmatched routes.
+Widened Zod schema types and added generic inference on ApiZod/ServiceZod parse helpers.
+
 ## 1.1.1
 
 Created new CryptoTools and deprecated Crypto.

@@ -133,8 +133,13 @@ export default class Application<T extends GlobalsType & { $handler?: { file: st
 
 		for (const request of requests) {
 			if (!request.resource || !request.resource.path) {
+				// options requests from browsers should always respond a 200 or they cors error and hide issues
+				const method = request.method.toLowerCase();
+				const secFetchMode = (request.headers?.['sec-fetch-mode'] as string || request.headers?.['Sec-Fetch-Mode'] as string || '').toLowerCase();
+				const isCorsOptions = method === 'options' && secFetchMode === 'cors';
+
 				return Promise.resolve((new Response(this._type, {
-					status: 404,
+					status: isCorsOptions ? 200 : 404,
 					headers: {
 						'Content-Type': 'application/json',
 						'Access-Control-Allow-Origin': request && request.headers && request.headers.Origin ? request.headers.Origin : '*',
@@ -143,7 +148,7 @@ export default class Application<T extends GlobalsType & { $handler?: { file: st
 						'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS, PATCH',
 						'Access-Control-Expose-Headers': 'Cache-Control, Content-Type, Authorization, Pragma, Expires'
 					},
-					body: `404 Not Found [${request.path}]`
+					body: isCorsOptions ? {} : `404 Not Found [${request.path}]`
 				})).get()).then((res) => this._middleware.end.reduce((p: Promise<any>, mw: any) => p.then((r: any) => mw.end(r)), Promise.resolve()).then(() => res)); // make sure we end any started middleware on failure
 			}
 

@@ -2,9 +2,9 @@ import { z } from 'zod';
 export type ZodMethodSchema = {
     description: string;
     security?: Record<string, any[]>[];
-    params?: z.ZodObject<any>;
-    query?: z.ZodObject<any>;
-    body?: z.ZodObject<any> | z.ZodPipe<any, any>;
+    params?: z.ZodType<any>;
+    query?: z.ZodType<any>;
+    body?: z.ZodType<any>;
     response?: Record<number, {
         description: string;
         schema: z.ZodType<any>;
